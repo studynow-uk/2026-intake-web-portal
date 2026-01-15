@@ -27,11 +27,19 @@
             min-height: 100vh;
         }
 
+        /* StudyNow Brand Colors */
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #004d99;
+            --secondary-color: #ff6600;
+            --accent-color: #00a86b;
+        }
+
         /* Sidebar Styles */
         .sidebar {
-            width: 400px;
+            width: 380px;
             background: white;
-            padding: 30px;
+            padding: 0;
             box-shadow: 2px 0 20px rgba(0, 0, 0, 0.05);
             position: sticky;
             top: 0;
@@ -40,25 +48,49 @@
             z-index: 100;
         }
 
+        .sidebar-brand {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .brand-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .brand-tagline {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .sidebar-content {
+            padding: 30px;
+        }
+
         .sidebar-header {
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .sidebar-header h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #1a1a2e;
             font-weight: 700;
             margin-bottom: 8px;
         }
 
         .sidebar-header p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #6b7280;
             line-height: 1.5;
         }
 
         .filter-section {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .filter-section:last-child {
@@ -79,7 +111,7 @@
 
         .filter-label i {
             font-size: 0.85rem;
-            color: #6366f1;
+            color: var(--primary-color);
         }
 
         /* Month Filter Pills */
@@ -103,16 +135,16 @@
         }
 
         .month-pill:hover {
-            border-color: #6366f1;
-            background: #f5f3ff;
+            border-color: var(--primary-color);
+            background: #f0f7ff;
             transform: translateY(-1px);
         }
 
         .month-pill.active {
-            background: #6366f1;
-            border-color: #6366f1;
+            background: var(--primary-color);
+            border-color: var(--primary-color);
             color: white;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
         }
 
         .clear-btn {
@@ -155,12 +187,12 @@
 
         .custom-select:focus {
             outline: none;
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
         }
 
         .custom-select:hover {
-            border-color: #6366f1;
+            border-color: var(--primary-color);
         }
 
         .select-wrapper::after {
@@ -195,8 +227,8 @@
 
         .search-input:focus {
             outline: none;
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
         }
 
         .search-input::placeholder {
@@ -238,7 +270,7 @@
         /* Stats Cards */
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -258,13 +290,13 @@
         }
 
         .stat-card.ug {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
             border: none;
             color: white;
         }
 
         .stat-card.pg {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #cc5200 100%);
             border: none;
             color: white;
         }
@@ -282,73 +314,150 @@
             line-height: 1;
         }
 
-        /* Courses Grid */
+        /* Two Column Layout */
+        .programs-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        /* Program Type Section */
+        .program-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .program-header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .program-header.pg {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #cc5200 100%);
+        }
+
+        .program-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .program-count {
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 14px;
+            border-radius: 8px;
+        }
+
+        /* University Group */
+        .university-group {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .university-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px 0;
+        }
+
+        .university-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1f2937;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .university-name i {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .university-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .course-count-badge {
+            background: #f3f4f6;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .expand-icon {
+            color: #9ca3af;
+            transition: transform 0.3s ease;
+            font-size: 0.85rem;
+        }
+
+        .expand-icon.expanded {
+            transform: rotate(180deg);
+        }
+
+        /* Courses Grid with Cards */
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-top: 15px;
         }
 
         .course-card {
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            border: 1px solid #e5e7eb;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .course-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, #6366f1 0%, #8b5cf6 100%);
+            padding: 16px;
+            background: #f9fafb;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-color);
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
 
         .course-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-            border-color: #6366f1;
+            background: #f3f4f6;
+            transform: translateX(4px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
-        .course-university {
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: #6366f1;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-
-        .course-name {
-            font-size: 1.05rem;
+        .course-card-name {
+            font-size: 0.9rem;
             color: #1f2937;
             font-weight: 600;
-            line-height: 1.5;
-            margin-bottom: 16px;
-            min-height: 48px;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
 
-        .course-badges {
+        .course-card-meta {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
 
-        .badge {
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 0.8rem;
+        .course-badge {
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
             font-weight: 600;
-        }
-
-        .badge-type {
-            background: #dbeafe;
-            color: #1e40af;
         }
 
         .badge-month {
@@ -363,6 +472,7 @@
             background: white;
             border-radius: 16px;
             border: 2px dashed #e5e7eb;
+            grid-column: 1 / -1;
         }
 
         .no-results i {
@@ -383,10 +493,44 @@
             font-size: 0.95rem;
         }
 
+        /* Collapsed state */
+        .courses-grid.collapsed {
+            display: none;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
         /* Responsive */
+        @media (max-width: 1400px) {
+            .programs-container {
+                gap: 20px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .sidebar {
-                width: 320px;
+                width: 300px;
+            }
+
+            .programs-container {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -406,12 +550,26 @@
                 padding: 20px;
             }
 
-            .courses-grid {
+            .programs-container {
                 grid-template-columns: 1fr;
             }
 
             .content-header h1 {
                 font-size: 1.5rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .program-header {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .university-name {
+                font-size: 0.9rem;
             }
         }
 
@@ -440,7 +598,7 @@
     <script type="text/babel">
         const { useState, useEffect, useMemo } = React;
 
-        // Embedded data - Updated with new courses
+        // Embedded data
         const COURSES_DATA = [{"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Financial Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Human Resource Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Law"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Tourism Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business, Hospitality and Events Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Digital Marketing and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Finance and Accounting"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Health and Social Care"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) International Business Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) International Business Management (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "LLB (Hons) Law"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "LLB (Hons) Law with Sociology"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA (Hons) Accounting and Financial Management (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA (Hons) Business and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA (Hons) Business Management and Entrepreneurship"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) Accounting and Financial Systems"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) Health and Social Care"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) International Tourism and Hospitality Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) International Tourism and Hospitality Management (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) Nursing Practice (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "FdA Business and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "FdA Tourism and Events Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "FdSc Health and Social Care"}, {"University": "Cardiff Metropolitan University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BA (Hons) Global Business Management"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Business Management and Leadership"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Business Management and Leadership"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Business, Management and Leadership"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Early Childhood Development and Learning"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Financial Management and Accounting"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Financial Management and Accounting"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Health and Social Care"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Law and Practice"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Marketing and Public Relations"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Primary Education and Teaching Studies"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Professional Accounting"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Professional Policing"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Public Health and Community Studies"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Tourism and Hospitality Management"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BEng Electro-Mechanical Engineering"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BEng Electro-Mechanical Engineering"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Biosciences"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Biosciences"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Psychology"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Psychology"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Aviation Management"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Cloud Computing"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Computing Science"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Computing Science"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Cyber Security"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Cyber Security"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Sport Performance and Coaching"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "LLB Law and Practice"}, {"University": "London Metropolitan University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA Business Management"}, {"University": "Northumbria University London Campus", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc ( Hons) Computing Systems"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Economics (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Entrepreneurship (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Finance (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Marketing (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Human Resource Management (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc International Business (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Marketing (Single Honours)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Civil Engineering and Construction Management (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Electronic Systems Engineering (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Engineering Management (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Mechanical Systems Engineering (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Science and Advanced Technologies (top up)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLM International Law"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Entrepreneurship"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration (Health and Social Care)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration (International)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MPH Master of Public Health"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc / PG Cert Healthcare Leadership and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Accounting and Finance"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Accounting and Financial Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Applied Bioscience"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Business Data Analytics"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Clinical Child Psychology"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Business"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Business Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Hospitality and Tourism Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Logistics and Supply Chain Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Marketing"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Project Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Business Administration"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Business Administration (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Fintech and Trading"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Nursing Practice"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Project Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Public Health"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Tourism and Hospitality"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Tourism and Hospitality (Top-Up)"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Business Analytics"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Business and Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Civil Infrastructure Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Computer Science"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Construction Management and Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Cyber Security"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Cyber Security Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Data Science & Artificial Intelligence"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Digital Chemical Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Finance"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Financial Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Financial Technology"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Future Vehicle Technologies"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Human Resource Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Information Systems & Business Analysis"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Accounting and Finance"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Investment Analysis and Risk"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Project Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Robotics and Autonomous Systems"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Strategic Marketing Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Supply Chain Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Sustainable Chemical Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Sustainable Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Transport Leadership"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Law LLM"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MA Business & Marketing"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA International Business"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Management"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Analytics for Business (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Information Technology (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Business Administration"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Cyber Security"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Strategic Innovation and Entrepreneurship"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Supply Chain Management"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Sustainable Technologies"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Sustainable Management"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Tourism Management"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Master of Business Administration"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "BSc (Hons) Business Computing (Top-Up)"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "BSc (Hons) Business with Accounting (Top-Up)"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Business Administration"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Cyber Security and Digital Forensics"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Information Systems"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Master of Business Administration"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Healthcare Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Digital Marketing"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Business Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Financial Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Human Resource Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Logistics and Supply Chain Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Marketing"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Criminology and Law (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Criminology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) English Language and Communication (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Computing (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Science (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Science (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Games Technology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Software Engineering (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Human Resource Management (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computing Technologies (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity and Networking (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Science (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Information Technology (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Mechanical Engineering (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Diploma in Healthcare Practice"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Applied Healthcare"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Built Environment"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Civil Engineering"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Engineering Project Management"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Human Resource Management (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computing Technologies (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity and Networking (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Building Information Modelling"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Civil Engineering"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Project Management"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Sustainable Building Engineering"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management with Accounting (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management with Finance (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management with Marketing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Criminology and Law (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Human Resource Management (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Audiology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Computing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Networking and Security (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Science (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Science (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Engineering and Computing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Games Development (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Healthcare Science (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Information Technology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Mechanical Engineering (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Software Engineering (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Technical Theatre (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Diploma in Healthcare Practice"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "University of Hull", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Diploma in Healthcare Practice"}, {"University": "University of Portsmouth", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Engineering Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MBA Master of Business Administration"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Advanced Mechanical Engineering"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Built Environment"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Civil Engineering"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Computer Science"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Construction Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Engineering Project Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Environmental Engineering"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Strategic Engineering Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Sustainable Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "LLM International Commercial Law"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "LLM Law"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "LLM Professional Legal Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Advertising and Brand Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Applied Innovation Leadership"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Automotive and Transport Design"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Automotive Journalism"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Communication, Culture and Media"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Creative Writing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Criminology and Criminal Justice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Curation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Design Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Diplomacy and Conflict Resolution"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA English Literature"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Film and Media Production"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Fine Art: Digital"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Global Journalism and Public Relations"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Graphic Design"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA History"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Illustration and Animation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Interior Design"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA International Relations"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Media Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Music Production"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Photography"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Popular Music Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Product Design Innovation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Sociology and Social Research"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Sports Journalism"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Terrorism, International Crime and Global Security"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Virtual and Augmented Reality"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MArch Architecture"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Global Business"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Global Healthcare Management and Leadership"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA International Fashion Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA International Human Resource Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA International Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Master of Business Administration"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Master of Business Administration AI and Business Analytics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Master of Business Administration Global Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Accounting and Financial Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Advanced Aerospace Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Advanced Mechanical Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Advanced Software Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Air Transport Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Antimicrobial Resistance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Applied Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Applied Strength, Conditioning and Rehabilitation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Artificial Intelligence and Human Factors"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Automotive Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Banking and Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Cellular and Molecular Pathology)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Clinical Biochemistry and Immunology)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Haematology with Blood Transfusion Sciences)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Infection Science)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biotechnology (Industrial and Environmental)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biotechnology (Molecular Biology)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biotechnology (Vaccinology and Immunotherapy)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Building Services Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Business Analytics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Business and Organisational Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Civil Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Civil Engineering Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Civil Infrastructure Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Computer Science"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Construction Management with BIM"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Construction Project and Cost Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Control, Robotics, and Intelligent Automation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Crowded Places and Public Safety Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security (Digital Forensics)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security (Ethical Hacking)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security (Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Data Science"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Data Science and Computational Intelligence"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Design and Systems Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Digital Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Digital Marketing Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Digital Marketing with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Disaster Management and Resilience"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Economics and Banking"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Economics and Banking with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Electrical and Electronic Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Electrical Automotive Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Embedded Systems Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Emergency Management and Resilience"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Energy Transition Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Management (Engineering Business Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Management (Operations Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Management (Technology Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Environmental Building Performance Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Environmental Data Analytics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Events and Experience Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Financial Technology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Financial Technology with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc FinTech"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Food Safety and Control"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Forensic Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Forensic Psychology and Mental Health"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Games Technology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Finance with Advanced Standing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Finance with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Healthcare Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Pharmaceutical and Biotech Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Public Health"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Innovation Management and Entrepreneurship"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Innovation Management and Entrepreneurship with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Intelligent Transport Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Intelligent Transport Systems"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Business Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Fashion Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Fashion Marketing with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Hospitality and Tourism Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Hospitality and Tourism Management with Advanced Standing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Hospitality and Tourism Management with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Human Resource Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Marketing Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Project Management with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Investment Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Investment, Risk and Trading"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Investment, Risk and Trading with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Management of Information Systems and Technology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Management with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Manufacturing and Production Engineering Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Oil and Gas Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Oil and Gas Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Pharmacology and Drug Discovery"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Physiotherapy"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Professional Accounting"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Professional Accounting with Advanced Standing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Professional Accounting with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Public Health Nutrition"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Renewable Energy Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Renewable Energy Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sport and Exercise Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sport Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Structural Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Supply Chain Management and Logistics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sustainability and Environmental Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sustainable Transport Systems"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business and Sustainability Management"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Master of Business Administration"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Health and Social Care Leadership and Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management with Project Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Project Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Public Health"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Data Analytics"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Data Analytics with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Human Resource Management"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Human Resource Management with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc Marketing"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc Marketing with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology with Business Development"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology with Business Development with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Health Promotion and Public Health"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Human Resource Management"}];
 
         const UniversityIntakes = () => {
@@ -449,9 +607,12 @@
             const [selectedUniversity, setSelectedUniversity] = useState('All');
             const [selectedProgramType, setSelectedProgramType] = useState('All');
             const [searchQuery, setSearchQuery] = useState('');
+            const [expandedUniversities, setExpandedUniversities] = useState({});
 
             useEffect(() => {
                 setData(COURSES_DATA);
+                // Start with all collapsed
+                setExpandedUniversities({});
             }, []);
 
             const months = useMemo(() => {
@@ -485,6 +646,28 @@
                 });
             }, [data, selectedMonth, selectedUniversity, selectedProgramType, searchQuery]);
 
+            // Group courses by Program Type and University
+            const groupedCourses = useMemo(() => {
+                const grouped = {};
+                
+                filteredCourses.forEach(course => {
+                    const programType = course['Program Type'];
+                    const university = course.University;
+                    
+                    if (!grouped[programType]) {
+                        grouped[programType] = {};
+                    }
+                    
+                    if (!grouped[programType][university]) {
+                        grouped[programType][university] = [];
+                    }
+                    
+                    grouped[programType][university].push(course);
+                });
+                
+                return grouped;
+            }, [filteredCourses]);
+
             const ugCount = filteredCourses.filter(c => c['Program Type'] === 'Undergraduate').length;
             const pgCount = filteredCourses.filter(c => c['Program Type'] === 'Postgraduate').length;
 
@@ -498,88 +681,103 @@
             const hasActiveFilters = selectedMonth !== 'All' || selectedUniversity !== 'All' || 
                                    selectedProgramType !== 'All' || searchQuery !== '';
 
+            const toggleUniversity = (programType, university) => {
+                const key = `${programType}-${university}`;
+                setExpandedUniversities(prev => ({
+                    ...prev,
+                    [key]: !prev[key]
+                }));
+            };
+
             return (
                 <div className="app-container">
                     {/* Sidebar */}
                     <aside className="sidebar">
-                        <div className="sidebar-header">
-                            <h2><i className="fas fa-filter"></i> Filters</h2>
-                            <p>Refine your course search</p>
+                        <div className="sidebar-brand">
+                            <div className="brand-logo">StudyNow</div>
+                            <div className="brand-tagline">Your Gateway to UK Education</div>
                         </div>
+                        
+                        <div className="sidebar-content">
+                            <div className="sidebar-header">
+                                <h2><i className="fas fa-filter"></i> Filters</h2>
+                                <p>Find your perfect course</p>
+                            </div>
 
-                        <div className="filter-section">
-                            <label className="filter-label">
-                                <i className="fas fa-calendar-alt"></i>
-                                Select Month
-                            </label>
-                            <div className="month-grid">
-                                {months.map(month => (
-                                    <button
-                                        key={month}
-                                        className={`month-pill ${selectedMonth === month ? 'active' : ''}`}
-                                        onClick={() => setSelectedMonth(month)}
-                                    >
-                                        {month}
+                            <div className="filter-section">
+                                <label className="filter-label">
+                                    <i className="fas fa-calendar-alt"></i>
+                                    Select Month
+                                </label>
+                                <div className="month-grid">
+                                    {months.map(month => (
+                                        <button
+                                            key={month}
+                                            className={`month-pill ${selectedMonth === month ? 'active' : ''}`}
+                                            onClick={() => setSelectedMonth(month)}
+                                        >
+                                            {month}
+                                        </button>
+                                    ))}
+                                </div>
+                                {hasActiveFilters && (
+                                    <button className="clear-btn" onClick={clearFilters}>
+                                        <i className="fas fa-times"></i> Clear All Filters
                                     </button>
-                                ))}
+                                )}
                             </div>
-                            {hasActiveFilters && (
-                                <button className="clear-btn" onClick={clearFilters}>
-                                    <i className="fas fa-times"></i> Clear All Filters
-                                </button>
-                            )}
-                        </div>
 
-                        <div className="filter-section">
-                            <label className="filter-label">
-                                <i className="fas fa-university"></i>
-                                University
-                            </label>
-                            <div className="select-wrapper">
-                                <select 
-                                    className="custom-select"
-                                    value={selectedUniversity}
-                                    onChange={(e) => setSelectedUniversity(e.target.value)}
-                                >
-                                    {universities.map(uni => (
-                                        <option key={uni} value={uni}>{uni}</option>
-                                    ))}
-                                </select>
+                            <div className="filter-section">
+                                <label className="filter-label">
+                                    <i className="fas fa-university"></i>
+                                    University
+                                </label>
+                                <div className="select-wrapper">
+                                    <select 
+                                        className="custom-select"
+                                        value={selectedUniversity}
+                                        onChange={(e) => setSelectedUniversity(e.target.value)}
+                                    >
+                                        {universities.map(uni => (
+                                            <option key={uni} value={uni}>{uni}</option>
+                                        ))}
+                                    </select>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="filter-section">
-                            <label className="filter-label">
-                                <i className="fas fa-book"></i>
-                                Program Type
-                            </label>
-                            <div className="select-wrapper">
-                                <select 
-                                    className="custom-select"
-                                    value={selectedProgramType}
-                                    onChange={(e) => setSelectedProgramType(e.target.value)}
-                                >
-                                    {programTypes.map(type => (
-                                        <option key={type} value={type}>{type}</option>
-                                    ))}
-                                </select>
+                            <div className="filter-section">
+                                <label className="filter-label">
+                                    <i className="fas fa-book"></i>
+                                    Program Type
+                                </label>
+                                <div className="select-wrapper">
+                                    <select 
+                                        className="custom-select"
+                                        value={selectedProgramType}
+                                        onChange={(e) => setSelectedProgramType(e.target.value)}
+                                    >
+                                        {programTypes.map(type => (
+                                            <option key={type} value={type}>{type}</option>
+                                        ))}
+                                    </select>
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="filter-section">
-                            <label className="filter-label">
-                                <i className="fas fa-search"></i>
-                                Search Courses
-                            </label>
-                            <div className="search-wrapper">
-                                <i className="fas fa-search search-icon"></i>
-                                <input
-                                    type="text"
-                                    className="search-input"
-                                    placeholder="Search courses..."
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                />
+                            <div className="filter-section">
+                                <label className="filter-label">
+                                    <i className="fas fa-search"></i>
+                                    Search Courses
+                                </label>
+                                <div className="search-wrapper">
+                                    <i className="fas fa-search search-icon"></i>
+                                    <input
+                                        type="text"
+                                        className="search-input"
+                                        placeholder="Search courses..."
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </aside>
@@ -591,29 +789,97 @@
                             <p>Alternative intake options for UK universities • March - June 2026</p>
                         </div>
 
-                        <div className="stats-grid">
-                            <div className="stat-card ug">
-                                <div className="stat-label">Undergraduate</div>
-                                <div className="stat-number">{ugCount}</div>
-                            </div>
-                            <div className="stat-card pg">
-                                <div className="stat-label">Postgraduate</div>
-                                <div className="stat-number">{pgCount}</div>
-                            </div>
-                        </div>
-
-                        {filteredCourses.length > 0 ? (
-                            <div className="courses-grid">
-                                {filteredCourses.map((course, index) => (
-                                    <div key={index} className="course-card">
-                                        <div className="course-university">{course.University}</div>
-                                        <div className="course-name">{course['Course Name']}</div>
-                                        <div className="course-badges">
-                                            <span className="badge badge-type">{course['Program Type']}</span>
-                                            <span className="badge badge-month">{course.Month} 2026</span>
+                        {Object.keys(groupedCourses).length > 0 ? (
+                            <div className="programs-container">
+                                {/* Undergraduate Column */}
+                                {groupedCourses['Undergraduate'] && (
+                                    <div className="program-section">
+                                        <div className="program-header">
+                                            <div className="program-title">
+                                                <i className="fas fa-graduation-cap"></i> Undergraduate
+                                            </div>
+                                            <div className="program-count">
+                                                {ugCount}
+                                            </div>
                                         </div>
+                                        
+                                        {Object.entries(groupedCourses['Undergraduate']).sort((a, b) => a[0].localeCompare(b[0])).map(([university, courses]) => {
+                                            const key = `Undergraduate-${university}`;
+                                            const isExpanded = expandedUniversities[key];
+                                            
+                                            return (
+                                                <div key={university} className="university-group">
+                                                    <div className="university-header" onClick={() => toggleUniversity('Undergraduate', university)}>
+                                                        <div className="university-name">
+                                                            <i className="fas fa-university"></i>
+                                                            {university}
+                                                        </div>
+                                                        <div className="university-meta">
+                                                            <span className="course-count-badge">{courses.length}</span>
+                                                            <i className={`fas fa-chevron-down expand-icon ${isExpanded ? 'expanded' : ''}`}></i>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div className={`courses-grid ${isExpanded ? '' : 'collapsed'}`}>
+                                                        {courses.map((course, idx) => (
+                                                            <div key={idx} className="course-card">
+                                                                <div className="course-card-name">{course['Course Name']}</div>
+                                                                <div className="course-card-meta">
+                                                                    <span className="course-badge badge-month">{course.Month} 2026</span>
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
                                     </div>
-                                ))}
+                                )}
+
+                                {/* Postgraduate Column */}
+                                {groupedCourses['Postgraduate'] && (
+                                    <div className="program-section">
+                                        <div className="program-header pg">
+                                            <div className="program-title">
+                                                <i className="fas fa-user-graduate"></i> Postgraduate
+                                            </div>
+                                            <div className="program-count">
+                                                {pgCount}
+                                            </div>
+                                        </div>
+                                        
+                                        {Object.entries(groupedCourses['Postgraduate']).sort((a, b) => a[0].localeCompare(b[0])).map(([university, courses]) => {
+                                            const key = `Postgraduate-${university}`;
+                                            const isExpanded = expandedUniversities[key];
+                                            
+                                            return (
+                                                <div key={university} className="university-group">
+                                                    <div className="university-header" onClick={() => toggleUniversity('Postgraduate', university)}>
+                                                        <div className="university-name">
+                                                            <i className="fas fa-university"></i>
+                                                            {university}
+                                                        </div>
+                                                        <div className="university-meta">
+                                                            <span className="course-count-badge">{courses.length}</span>
+                                                            <i className={`fas fa-chevron-down expand-icon ${isExpanded ? 'expanded' : ''}`}></i>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div className={`courses-grid ${isExpanded ? '' : 'collapsed'}`}>
+                                                        {courses.map((course, idx) => (
+                                                            <div key={idx} className="course-card">
+                                                                <div className="course-card-name">{course['Course Name']}</div>
+                                                                <div className="course-card-meta">
+                                                                    <span className="course-badge badge-month">{course.Month} 2026</span>
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                )}
                             </div>
                         ) : (
                             <div className="no-results">
@@ -622,6 +888,10 @@
                                 <p>Try adjusting your filters or search query</p>
                             </div>
                         )}
+
+                        <div className="footer">
+                            Powered by <a href="https://www.studynow.org.uk/" target="_blank" rel="noopener noreferrer">StudyNow</a> • Your Gateway to UK Education
+                        </div>
                     </main>
                 </div>
             );
