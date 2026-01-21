@@ -603,8 +603,3704 @@
         const { useState, useEffect, useMemo } = React;
 
         // Embedded data
-        const COURSES_DATA = [{"University": "Canterbury Christ Church University (CCCU)", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Business"}, {"University": "Canterbury Christ Church University (CCCU)", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA International"},{"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Financial Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Human Resource Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Law"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business and Tourism Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Business, Hospitality and Events Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Digital Marketing and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Finance and Accounting"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Health and Social Care"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) International Business Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) International Business Management (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "LLB (Hons) Law"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "LLB (Hons) Law with Sociology"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA (Hons) Accounting and Financial Management (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA (Hons) Business and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA (Hons) Business Management and Entrepreneurship"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) Accounting and Financial Systems"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) Health and Social Care"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) International Tourism and Hospitality Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) International Tourism and Hospitality Management (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc (Hons) Nursing Practice (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "FdA Business and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "FdA Tourism and Events Management"}, {"University": "Anglia Ruskin University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "FdSc Health and Social Care"}, {"University": "Cardiff Metropolitan University", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BA (Hons) Global Business Management"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Business Management and Leadership"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Business Management and Leadership"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Business, Management and Leadership"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Early Childhood Development and Learning"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Financial Management and Accounting"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Financial Management and Accounting"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Health and Social Care"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Law and Practice"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Marketing and Public Relations"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Primary Education and Teaching Studies"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Professional Accounting"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Professional Policing"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Public Health and Community Studies"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BA Tourism and Hospitality Management"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BEng Electro-Mechanical Engineering"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BEng Electro-Mechanical Engineering"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Biosciences"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Biosciences"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Psychology"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Applied Psychology"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Aviation Management"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Cloud Computing"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Computing Science"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Computing Science"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Cyber Security"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Cyber Security"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "BSc Sport Performance and Coaching"}, {"University": "Coventry University", "Program Type": "Undergraduate", "Month": "Mar", "Course Name": "LLB Law and Practice"}, {"University": "London Metropolitan University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BA Business Management"}, {"University": "Northumbria University London Campus", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc ( Hons) Computing Systems"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Economics (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Entrepreneurship (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Finance (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Business Management and Marketing (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Human Resource Management (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc International Business (Single Honours)"}, {"University": "Roehampton University", "Program Type": "Undergraduate", "Month": "Apr", "Course Name": "BSc Marketing (Single Honours)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Civil Engineering and Construction Management (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Electronic Systems Engineering (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Engineering Management (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BEng (Hons) Mechanical Systems Engineering (top up)"}, {"University": "University of Portsmouth", "Program Type": "Undergraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Science and Advanced Technologies (top up)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLM International Law"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Entrepreneurship"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration (Health and Social Care)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration (International)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MPH Master of Public Health"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc / PG Cert Healthcare Leadership and Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Accounting and Finance"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Accounting and Financial Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Applied Bioscience"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Business Data Analytics"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Clinical Child Psychology"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Business"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Business Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Hospitality and Tourism Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Logistics and Supply Chain Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Marketing"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc International Project Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Business Administration"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Business Administration (Top-Up)"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Fintech and Trading"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Nursing Practice"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Project Management"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Public Health"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Tourism and Hospitality"}, {"University": "Anglia Ruskin University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Tourism and Hospitality (Top-Up)"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Business Analytics"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Business and Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Civil Infrastructure Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Computer Science"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Construction Management and Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Cyber Security"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Cyber Security Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Data Science & Artificial Intelligence"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Digital Chemical Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Finance"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Financial Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Financial Technology"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Future Vehicle Technologies"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Human Resource Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Information Systems & Business Analysis"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Accounting and Finance"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Investment Analysis and Risk"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Project Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Robotics and Autonomous Systems"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Strategic Marketing Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Supply Chain Management"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Sustainable Chemical Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Sustainable Engineering"}, {"University": "Aston University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Transport Leadership"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Law LLM"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MA Business & Marketing"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA International Business"}, {"University": "Bangor University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Management"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Analytics for Business (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Information Technology (Top-Up)"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Business Administration"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Cyber Security"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Strategic Innovation and Entrepreneurship"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Supply Chain Management"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Sustainable Technologies"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Sustainable Management"}, {"University": "Cardiff Metropolitan University", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Tourism Management"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Master of Business Administration"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "BSc (Hons) Business Computing (Top-Up)"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "BSc (Hons) Business with Accounting (Top-Up)"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Business Administration"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Cyber Security and Digital Forensics"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Information Systems"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Master of Business Administration"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Healthcare Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Digital Marketing"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Business Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Financial Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Human Resource Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Logistics and Supply Chain Management"}, {"University": "Roehampton University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Global Marketing"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Criminology and Law (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Criminology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) English Language and Communication (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Computing (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Science (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Science (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Games Technology (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Software Engineering (Top-Up)"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Human Resource Management (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computing Technologies (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity and Networking (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Science (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Information Technology (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Mechanical Engineering (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Diploma in Healthcare Practice"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Applied Healthcare"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Built Environment"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Civil Engineering"}, {"University": "Ulster University Birmingham", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Engineering Project Management"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Human Resource Management (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computing Technologies (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity and Networking (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "Ulster University Manchester", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Building Information Modelling"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Civil Engineering"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Engineering Project Management"}, {"University": "University of Greenwich", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Sustainable Building Engineering"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management with Accounting (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management with Finance (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Business Management with Marketing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Criminology and Law (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Event Management (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Human Resource Management (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) International Business (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BA (Hons) Marketing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Applied Psychology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Audiology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Computing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Business Information Technology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Networking and Security (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Computer Science (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Cybersecurity (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Data Science (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Engineering and Computing (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Games Development (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Healthcare Science (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Information Technology (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Mechanical Engineering (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Software Engineering (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "BSc (Hons) Technical Theatre (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Diploma in Healthcare Practice"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "LLB (Hons) Law (Top-Up)"}, {"University": "University of Huddersfield", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MBA Master of Business Administration"}, {"University": "University of Hull", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Diploma in Healthcare Practice"}, {"University": "University of Portsmouth", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Engineering Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MBA Master of Business Administration"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Advanced Mechanical Engineering"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Built Environment"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Civil Engineering"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Computer Science"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Construction Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Engineering Project Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Environmental Engineering"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Strategic Engineering Management"}, {"University": "University of Salford", "Program Type": "Postgraduate", "Month": "Jun", "Course Name": "MSc Sustainable Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "LLM International Commercial Law"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "LLM Law"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "LLM Professional Legal Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Advertising and Brand Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Applied Innovation Leadership"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Automotive and Transport Design"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Automotive Journalism"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Communication, Culture and Media"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Creative Writing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Criminology and Criminal Justice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Curation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Design Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Diplomacy and Conflict Resolution"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA English Literature"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Film and Media Production"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Fine Art: Digital"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Global Journalism and Public Relations"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Graphic Design"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA History"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Illustration and Animation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Interior Design"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA International Relations"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Media Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Music Production"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Photography"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Popular Music Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Product Design Innovation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Sociology and Social Research"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Sports Journalism"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Terrorism, International Crime and Global Security"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MA Virtual and Augmented Reality"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MArch Architecture"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Global Business"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Global Healthcare Management and Leadership"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA International Fashion Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA International Human Resource Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA International Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Master of Business Administration"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Master of Business Administration AI and Business Analytics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MBA Master of Business Administration Global Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Accounting and Financial Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Advanced Aerospace Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Advanced Mechanical Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Advanced Software Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Air Transport Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Antimicrobial Resistance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Applied Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Applied Strength, Conditioning and Rehabilitation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Artificial Intelligence and Human Factors"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Automotive Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Banking and Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Cellular and Molecular Pathology)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Clinical Biochemistry and Immunology)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Haematology with Blood Transfusion Sciences)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biomedical Science (Infection Science)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biotechnology (Industrial and Environmental)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biotechnology (Molecular Biology)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Biotechnology (Vaccinology and Immunotherapy)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Building Services Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Business Analytics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Business and Organisational Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Civil Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Civil Engineering Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Civil Infrastructure Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Computer Science"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Construction Management with BIM"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Construction Project and Cost Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Control, Robotics, and Intelligent Automation"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Crowded Places and Public Safety Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security (Digital Forensics)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security (Ethical Hacking)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Cyber Security (Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Data Science"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Data Science and Computational Intelligence"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Design and Systems Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Digital Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Digital Marketing Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Digital Marketing with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Disaster Management and Resilience"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Economics and Banking"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Economics and Banking with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Electrical and Electronic Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Electrical Automotive Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Embedded Systems Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Emergency Management and Resilience"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Energy Transition Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Management (Engineering Business Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Management (Operations Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Management (Technology Management)"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Engineering Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Environmental Building Performance Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Environmental Data Analytics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Events and Experience Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Financial Technology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Financial Technology with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc FinTech"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Food Safety and Control"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Forensic Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Forensic Psychology and Mental Health"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Games Technology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Finance"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Finance with Advanced Standing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Finance with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Healthcare Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Pharmaceutical and Biotech Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Global Public Health"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Innovation Management and Entrepreneurship"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Innovation Management and Entrepreneurship with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Intelligent Transport Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Intelligent Transport Systems"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Business Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Fashion Marketing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Fashion Marketing with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Hospitality and Tourism Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Hospitality and Tourism Management with Advanced Standing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Hospitality and Tourism Management with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Human Resource Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Marketing Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc International Project Management with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Investment Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Investment, Risk and Trading"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Investment, Risk and Trading with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Management of Information Systems and Technology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Management with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Manufacturing and Production Engineering Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Oil and Gas Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Oil and Gas Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Pharmacology and Drug Discovery"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Physiotherapy"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Professional Accounting"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Professional Accounting with Advanced Standing"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Professional Accounting with Professional Practice"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Project Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Public Health Nutrition"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Renewable Energy Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Renewable Energy Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sport and Exercise Psychology"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sport Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Structural Engineering"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Supply Chain Management and Logistics"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sustainability and Environmental Management"}, {"University": "Coventry University", "Program Type": "Postgraduate", "Month": "Mar", "Course Name": "MSc Sustainable Transport Systems"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business and Sustainability Management"}, {"University": "De Montfort University, Leicester", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA Master of Business Administration"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Health and Social Care Leadership and Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management with Project Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Project Management"}, {"University": "London Metropolitan University", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc Public Health"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MBA"}, {"University": "Middlesex University, London", "Program Type": "Postgraduate", "Month": "Apr", "Course Name": "MSc International Business Management"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Data Analytics"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Data Analytics with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Human Resource Management"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc International Business with Human Resource Management with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc Marketing"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "Extended MSc Marketing with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology with Business Development"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Computer Science and Technology with Business Development with Advanced Practice"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Health Promotion and Public Health"}, {"University": "Northumbria University London Campus", "Program Type": "Postgraduate", "Month": "May", "Course Name": "MSc Human Resource Management"}];
-
+        const COURSES_DATA = [
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Business and Financial Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Business and Human Resource Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Business and Law"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Business and Tourism Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Business, Hospitality and Events Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Digital Marketing and Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Finance and Accounting"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Health and Social Care"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) International Business Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) International Business Management (Top-Up)"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "LLB (Hons) Law"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "LLB (Hons) Law with Sociology"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA (Hons) Global Business Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Business Management and Leadership"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Business, Management and Leadership"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Early Childhood Development and Learning"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Financial Management and Accounting"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Health and Social Care"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Law and Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Marketing and Public Relations"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Primary Education and Teaching Studies"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Professional Accounting"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Professional Policing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Public Health and Community Studies"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BA Tourism and Hospitality Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BEng Electro-Mechanical Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Applied Biosciences"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Applied Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Aviation Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Cloud Computing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Computing Science"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Cyber Security"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "BSc Sport Performance and Coaching"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA Global Business Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA International Business (Top-Up)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA Professional Policing Practice (Apprenticeship)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc Energy Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc International Finance and Banking (Top-Up)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Undergraduate",
+    "Month": "Mar",
+    "Course Name": "LLB Law and Practice"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA Business Management"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc ( Hons) Computing Systems"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Nursing Studies (International Top-up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA (Hons) Business and Management"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA (Hons) Business and Management (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BA (Hons) Digital Marketing (Degree Apprenticeship)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BEng (Hons) Civil Engineering and Construction Management (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BEng (Hons) Electronic Systems Engineering (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BEng (Hons) Engineering Management (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BEng (Hons) Mechanical Systems Engineering (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Econ) (Hons) Economics, Finance and Banking"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Computer Science"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Computer Science (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Undergraduate",
+    "Month": "May",
+    "Course Name": "BSc (Hons) Computer Science and Advanced Technologies (Top-Up)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Business Management and Entrepreneurship (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Business Management and Finance (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Business Management and Marketing (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Human Resource Management (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc International Business (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Marketing (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Business Management (Single Honours)"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc Business Management and Economics (Single Honours)"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BA (Hons) Accounting and Financial Management (Top-Up)"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BA (Hons) Business and Management"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BA (Hons) Business Management and Entrepreneurship"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc (Hons) Accounting and Financial Systems"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc (Hons) Health and Social Care"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc (Hons) International Tourism and Hospitality Management"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc (Hons) International Tourism and Hospitality Management (Top-Up)"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "BSc (Hons) Nursing Practice (Top-Up)"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "FdA Business and Management"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "FdA Tourism and Events Management"
+  },
+  {
+    "University": "University of Sunderland",
+    "Program Type": "Undergraduate",
+    "Month": "Apr",
+    "Course Name": "FdSc Health and Social Care"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "LLM International Law"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Entrepreneurship"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration (Health and Social Care)"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration (International)"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MPH Master of Public Health"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc / PG Cert Healthcare Leadership and Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Accounting and Finance"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Accounting and Financial Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Applied Bioscience"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Business Data Analytics"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Clinical Child Psychology"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Hospitality and Tourism Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Logistics and Supply Chain Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Marketing"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Project Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Business Administration"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Business Administration (Top-Up)"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Engineering Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Fintech and Trading"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Nursing Practice"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Public Health"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Tourism and Hospitality"
+  },
+  {
+    "University": "Anglia Ruskin University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Tourism and Hospitality (Top-Up)"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Business Analytics"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Business and Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Civil Infrastructure Engineering"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Computer Science"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Construction Management and Engineering"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Cyber Security"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Cyber Security Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Data Science & Artificial Intelligence"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Digital Chemical Engineering"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Engineering Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Finance"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Financial Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Financial Technology"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Future Vehicle Technologies"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Human Resource Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Information Systems & Business Analysis"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Accounting and Finance"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Investment Analysis and Risk"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Robotics and Autonomous Systems"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Strategic Marketing Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Supply Chain Management"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Sustainable Chemical Engineering"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Sustainable Engineering"
+  },
+  {
+    "University": "Aston University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Transport Leadership"
+  },
+  {
+    "University": "Bangor University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Law LLM"
+  },
+  {
+    "University": "Bangor University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Business & Marketing"
+  },
+  {
+    "University": "Bangor University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA International Business"
+  },
+  {
+    "University": "Bangor University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Management"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Master of Business Administration (MBA)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Business Analytics)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Finance)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Health Sector Management)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Human Resources)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Marketing)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Project Management)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Sport Management)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Strategic Management)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA (Supply Chain and Logistics Management)"
+  },
+  {
+    "University": "Cardiff Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Advanced Computer Science"
+  },
+  {
+    "University": "Health Sciences University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Healthcare Management"
+  },
+  {
+    "University": "Middlesex University, London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Master of Business Administration"
+  },
+  {
+    "University": "Middlesex University, London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Healthcare Management"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Digital Marketing"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Global Business Management"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Global Financial Management"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Global Human Resource Management"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Global Logistics and Supply Chain Management"
+  },
+  {
+    "University": "Roehampton University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Global Marketing"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Data Analytics"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Data Analytics with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Human Resource Management"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Human Resource Management with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc Marketing"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc Marketing with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Business Developmen"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Business Development with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Health Promotion and Public Health"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Human Resource Management"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Human Resource Management with Advance Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Data Analytics"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Data Analytics with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Human Resource Management"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Human Resource Management with Advanced Practice"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Marketing"
+  },
+  {
+    "University": "Northumbria University London Campus",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Marketing with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Data Analytics"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Data Analytics with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Human Resource Management"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Human Resource Management with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc Marketing"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc Marketing with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Business Development"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Business Development with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Health Promotion and Public Health"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Human Resource Management"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Human Resource Management with Advance Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Data Analytics"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Data Analytics with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Human Resource Management"
+  },
+  {
+    "University": "Ulster University Birmingham",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Human Resource Management with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Data Analytics"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Data Analytics with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Human Resource Management"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Extended MSc International Business with Human Resource Management with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology with Business Development with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science and Technology"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Health Promotion and Public Health"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Data Analytics"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Data Analytics with Advanced Practice"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Human Resource Management"
+  },
+  {
+    "University": "Ulster University Manchester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Human Resource Management with Advanced Practice"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MPH Master of Public Health"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Advanced Computer Science"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Banking and Finance"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Digital Marketing"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Engineering Management"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Financial Technology (FinTech) and Business Analytics"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Health Services Management"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Finance"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Tourism and Hospitality Management"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Logistics and Supply Chain Management"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Marketing Management"
+  },
+  {
+    "University": "University of Chester",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Programme and Project Management"
+  },
+  {
+    "University": "University of Bradford",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business and Management"
+  },
+  {
+    "University": "University of Greenwich",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MA International Business"
+  },
+  {
+    "University": "University of Greenwich",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MA International Business (with Placement)"
+  },
+  {
+    "University": "University of Greenwich",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Global"
+  },
+  {
+    "University": "University of Greenwich",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Global (With Placement)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Education (Early Childhood Studies)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Education (Leadership and Management)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Education (Special Educational Needs)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Education (Teaching and Learning)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Accounting and Finance"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Accounting and Finance (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Applied Artificial Intelligence"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Artificial Intelligence"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Banking and Finance"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Banking and Finance (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Business Intelligence and Analytics"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Business Intelligence and Analytics (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computing"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Cyber Security and Digital Forensics"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Data Analytics"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Digital Marketing"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Digital Marketing (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Finance"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Finance (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Housing Leadership (Distance Learning)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Information Systems Management"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Marketing"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business with Marketing (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Investigative Psychology (Distance Learning)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with Human Resource Management"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with Human Resource Management (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with International Business"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with International Business (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with Marketing"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with Marketing (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Marketing"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Marketing (Professional Practice)"
+  },
+  {
+    "University": "University of Huddersfield",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "PGCE International (Distance Learning)"
+  },
+  {
+    "University": "University of Hull",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Digital Marketing"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Global (with Professional Experience)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Global"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Senior Leadership (Top-Up)"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Construction Project Management"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Engineering Management"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Information Systems"
+  },
+  {
+    "University": "University of Portsmouth",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business and Management"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Digital Marketing"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Entrepreneurship and Innovation"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Human Resource Management"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Management"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Managing AI in Business"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Managing Innovation and Information Technology"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Operations Management and Business Analytics"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Procurement, Logistics and Supply Chain Management"
+  },
+  {
+    "University": "University of Salford",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "LLM International Commercial Law"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "LLM Law"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "LLM Professional Legal Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Advertising and Brand Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Applied Innovation Leadership"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Automotive and Transport Design"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Automotive Journalism"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Communication, Culture and Media"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Creative Writing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Criminology and Criminal Justice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Curation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Design Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Diplomacy and Conflict Resolution"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA English Literature"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Film and Media Production"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Fine Art: Digital"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Global Journalism and Public Relations"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Graphic Design"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA History"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Illustration and Animation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Interior Design"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA International Relations"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Media Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Music Production"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Photography"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Popular Music Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Product Design Innovation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Sociology and Social Research"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Sports Journalism"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Terrorism, International Crime and Global Security"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MA Virtual and Augmented Reality"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MArch Architecture"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Global Business"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Global Healthcare Management and Leadership"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA International Fashion Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA International Human Resource Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA International Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration AI and Business Analytics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA Master of Business Administration Global Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Accounting and Financial Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Advanced Aerospace Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Advanced Mechanical Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Advanced Software Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Air Transport Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Antimicrobial Resistance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Applied Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Applied Strength, Conditioning and Rehabilitation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Artificial Intelligence and Human Factors"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Automotive Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Banking and Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biomedical Science (Cellular and Molecular Pathology)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biomedical Science (Clinical Biochemistry and Immunology)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biomedical Science (Haematology with Blood Transfusion Sciences)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biomedical Science (Infection Science)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biotechnology (Industrial and Environmental)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biotechnology (Molecular Biology)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Biotechnology (Vaccinology and Immunotherapy)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Building Services Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Business Analytics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Business and Organisational Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Civil Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Civil Engineering Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Civil Infrastructure Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Computer Science"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Construction Management with BIM"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Construction Project and Cost Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Control, Robotics, and Intelligent Automation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Crowded Places and Public Safety Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Cyber Security"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Cyber Security (Digital Forensics)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Cyber Security (Ethical Hacking)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Cyber Security (Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Data Science"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Data Science and Computational Intelligence"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Design and Systems Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Digital Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Digital Marketing Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Digital Marketing with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Disaster Management and Resilience"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Economics and Banking"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Economics and Banking with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Electrical and Electronic Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Electrical Automotive Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Embedded Systems Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Emergency Management and Resilience"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Energy Transition Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Engineering Management (Engineering Business Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Engineering Management (Operations Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Engineering Management (Technology Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Engineering Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Environmental Building Performance Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Environmental Data Analytics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Events and Experience Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Financial Technology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Financial Technology with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc FinTech"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Food Safety and Control"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Forensic Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Forensic Psychology and Mental Health"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Games Technology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Global Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Global Finance with Advanced Standing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Global Finance with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Global Healthcare Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Global Pharmaceutical and Biotech Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Global Public Health"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Innovation Management and Entrepreneurship"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Innovation Management and Entrepreneurship with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Intelligent Transport Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Intelligent Transport Systems"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Fashion Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Fashion Marketing with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Hospitality and Tourism Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Hospitality and Tourism Management with Advanced Standing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Hospitality and Tourism Management with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Human Resource Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Marketing Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Project Management with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Investment Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Investment, Risk and Trading"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Investment, Risk and Trading with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management of Information Systems and Technology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Management with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Manufacturing and Production Engineering Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Oil and Gas Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Oil and Gas Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Pharmacology and Drug Discovery"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Physiotherapy"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Professional Accounting"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Professional Accounting with Advanced Standing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Professional Accounting with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Public Health Nutrition"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Renewable Energy Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Renewable Energy Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Sport and Exercise Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Sport Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Structural Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Supply Chain Management and Logistics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Sustainability and Environmental Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc Sustainable Transport Systems"
+  },
+  {
+    "University": "De Montfort University, Leicester",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business and Sustainability Management"
+  },
+  {
+    "University": "De Montfort University, Leicester",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Master of Business Administration"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Health and Social Care Leadership and Management"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business Management with Project Management"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "London Metropolitan University",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Public Health"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Business Administration"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MBA Business Administration (Top-Up)"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Engineering Management"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Fintech and Trading"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Nursing Practice"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Public Health"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Tourism and Hospitality"
+  },
+  {
+    "University": "University of Sunderland London",
+    "Program Type": "Postgraduate",
+    "Month": "Apr",
+    "Course Name": "MSc Tourism and Hospitality (Top-Up)"
+  },
+  {
+    "University": "Canterbury Christ Church University (CCCU)",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MSc International Business"
+  },
+  {
+    "University": "Canterbury Christ Church University (CCCU)",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "MBA International"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Applied AI and Data Science (MSC)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Digital Marketing (MSC)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Financial Management (MSC)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Global Master of Business Administration (MBA)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Global Master of Business Administration (Financial Management) (MBA)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Global Master of Business Administration (HRM) (MBA)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Logistics Management (MSC)"
+  },
+  {
+    "University": "Southampton Solent University",
+    "Program Type": "Postgraduate",
+    "Month": "May",
+    "Course Name": "Project Management (MSC)"
+  },
+  {
+    "University": "Edinburgh Napier University",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "Business Leadership and Practice (MBA)"
+  },
+  {
+    "University": "Edinburgh Napier University",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "Business Management (MSC)"
+  },
+  {
+    "University": "Edinburgh Napier University",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "International Business Management (MSC)"
+  },
+  {
+    "University": "Edinburgh Napier University",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "Computing  (MSC)"
+  },
+  {
+    "University": "Edinburgh Napier University",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "Artificial Intelligence and Data Science (MSC)"
+  },
+  {
+    "University": "Edinburgh Napier University",
+    "Program Type": "Postgraduate",
+    "Month": "Jun",
+    "Course Name": "Construction Project Management (MSC)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "LLM International Commercial Law"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "LLM Law"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "LLM Professional Legal Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Advertising and Brand Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Applied Innovation Leadership"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Automotive and Transport Design"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Automotive Journalism"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Communication, Culture and Media"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Creative Writing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Criminology and Criminal Justice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Curation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Design Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Diplomacy and Conflict Resolution"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA English Literature"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Film and Media Production"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Fine Art: Digital"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Global Journalism and Public Relations"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Graphic Design"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA History"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Illustration and Animation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Interior Design"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA International Relations"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Media Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Music Production"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Photography"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Popular Music Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Product Design Innovation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Sociology and Social Research"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Sports Journalism"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Terrorism, International Crime and Global Security"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MA Virtual and Augmented Reality"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MArch Architecture"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA Global Business"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA Global Healthcare Management and Leadership"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA International Fashion Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA International Human Resource Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA International Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA Master of Business Administration"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA Master of Business Administration AI and Business Analytics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MBA Master of Business Administration Global Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Accounting and Financial Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Advanced Aerospace Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Advanced Mechanical Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Advanced Software Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Air Transport Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Antimicrobial Resistance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Applied Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Applied Strength, Conditioning and Rehabilitation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Artificial Intelligence and Human Factors"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Automotive Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Banking and Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biomedical Science (Cellular and Molecular Pathology)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biomedical Science (Clinical Biochemistry and Immunology)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biomedical Science (Haematology with Blood Transfusion Sciences)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biomedical Science (Infection Science)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biotechnology (Industrial and Environmental)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biotechnology (Molecular Biology)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Biotechnology (Vaccinology and Immunotherapy)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Building Services Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Business Analytics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Business and Organisational Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Civil Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Civil Engineering Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Civil Infrastructure Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Computer Science"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Construction Management with BIM"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Construction Project and Cost Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Control, Robotics, and Intelligent Automation"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Crowded Places and Public Safety Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Cyber Security"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Cyber Security (Digital Forensics)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Cyber Security (Ethical Hacking)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Cyber Security (Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Data Science"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Data Science and Computational Intelligence"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Design and Systems Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Digital Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Digital Marketing Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Digital Marketing with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Disaster Management and Resilience"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Economics and Banking"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Economics and Banking with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Electrical and Electronic Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Electrical Automotive Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Embedded Systems Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Emergency Management and Resilience"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Energy Transition Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Engineering Management (Engineering Business Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Engineering Management (Operations Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Engineering Management (Technology Management)"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Engineering Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Environmental Building Performance Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Environmental Data Analytics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Events and Experience Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Financial Technology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Financial Technology with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc FinTech"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Food Safety and Control"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Forensic Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Forensic Psychology and Mental Health"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Games Technology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Global Finance"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Global Finance with Advanced Standing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Global Finance with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Global Healthcare Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Global Pharmaceutical and Biotech Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Global Public Health"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Innovation Management and Entrepreneurship"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Innovation Management and Entrepreneurship with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Intelligent Transport Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Intelligent Transport Systems"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Business Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Fashion Marketing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Fashion Marketing with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Hospitality and Tourism Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Hospitality and Tourism Management with Advanced Standing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Hospitality and Tourism Management with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Human Resource Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Marketing Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc International Project Management with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Investment Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Investment, Risk and Trading"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Investment, Risk and Trading with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Management of Information Systems and Technology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Management with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Manufacturing and Production Engineering Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Oil and Gas Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Oil and Gas Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Pharmacology and Drug Discovery"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Physiotherapy"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Professional Accounting"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Professional Accounting with Advanced Standing"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Professional Accounting with Professional Practice"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Project Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Public Health Nutrition"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Renewable Energy Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Renewable Energy Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Sport and Exercise Psychology"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Sport Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Structural Engineering"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Supply Chain Management and Logistics"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Sustainability and Environmental Management"
+  },
+  {
+    "University": "Coventry University",
+    "Program Type": "Postgraduate",
+    "Month": "Mar",
+    "Course Name": "MSc Sustainable Transport Systems"
+  }
+];
         const UniversityIntakes = () => {
             const [data, setData] = useState([]);
             const [selectedMonth, setSelectedMonth] = useState('All');
