@@ -469,6 +469,11 @@
             color: #86198f;
         }
 
+        .badge-location {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
         /* No Results */
         .no-results {
             text-align: center;
@@ -5001,6 +5006,7 @@ const COURSES_DATA = [
                                                                 <div className="course-card-name">{course['Course Name']}</div>
                                                                 <div className="course-card-meta">
                                                                     <span className="course-badge badge-month">{course.Month} 2026</span>
+                                                                    {course.Location && <span className="course-badge badge-location"><i className="fas fa-map-marker-alt" style={{marginRight: '4px'}}></i>{course.Location}</span>}
                                                                 </div>
                                                             </div>
                                                         ))}
@@ -5022,11 +5028,11 @@ const COURSES_DATA = [
                                                 {pgCount}
                                             </div>
                                         </div>
-                                        
+
                                         {Object.entries(groupedCourses['Postgraduate']).sort((a, b) => a[0].localeCompare(b[0])).map(([university, courses]) => {
                                             const key = `Postgraduate-${university}`;
                                             const isExpanded = expandedUniversities[key];
-                                            
+
                                             return (
                                                 <div key={university} className="university-group">
                                                     <div className="university-header" onClick={() => toggleUniversity('Postgraduate', university)}>
@@ -5039,13 +5045,14 @@ const COURSES_DATA = [
                                                             <i className={`fas fa-chevron-down expand-icon ${isExpanded ? 'expanded' : ''}`}></i>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div className={`courses-grid ${isExpanded ? '' : 'collapsed'}`}>
                                                         {courses.map((course, idx) => (
                                                             <div key={idx} className="course-card">
                                                                 <div className="course-card-name">{course['Course Name']}</div>
                                                                 <div className="course-card-meta">
                                                                     <span className="course-badge badge-month">{course.Month} 2026</span>
+                                                                    {course.Location && <span className="course-badge badge-location"><i className="fas fa-map-marker-alt" style={{marginRight: '4px'}}></i>{course.Location}</span>}
                                                                 </div>
                                                             </div>
                                                         ))}
